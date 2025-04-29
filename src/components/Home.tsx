@@ -47,8 +47,8 @@ const Home: React.FC = () => {
             <div className="feature-card">
               <h3>URL Base</h3>
               <div className="code-block">
-                <code>https://mockup-json.vercel.app/api</code>
-                <button className="copy-btn" onClick={() => navigator.clipboard.writeText('https://mockup-json.vercel.app/api')}>
+                <code>https://api-argenta.vercel.app/api</code>
+                <button className="copy-btn" onClick={() => navigator.clipboard.writeText('https://api-argenta.vercel.app/api')}>
                   Copiar
                 </button>
               </div>
@@ -59,28 +59,28 @@ const Home: React.FC = () => {
               <table className="params-table">
                 <thead>
                   <tr>
-                    <th>Parámetro</th>
-                    <th>Descripción</th>
-                    <th>Ejemplo</th>
+                    <th key="param-header">Parámetro</th>
+                    <th key="desc-header">Descripción</th>
+                    <th key="example-header">Ejemplo</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr key="param-cantidad">
                     <td><code>cantidad</code></td>
                     <td>Número de registros a generar (1-1000)</td>
                     <td><code>cantidad=50</code></td>
                   </tr>
-                  <tr>
+                  <tr key="param-fields">
                     <td><code>fields</code></td>
                     <td>Campos específicos a incluir (separados por coma)</td>
                     <td><code>fields=nombre,apellido,dni</code></td>
                   </tr>
-                  <tr>
+                  <tr key="param-allFields">
                     <td><code>allFields</code></td>
                     <td>Incluir todos los campos disponibles</td>
                     <td><code>allFields=true</code></td>
                   </tr>
-                  <tr>
+                  <tr key="param-download">
                     <td><code>download</code></td>
                     <td>Descargar resultado como archivo JSON</td>
                     <td><code>download=true</code></td>
@@ -95,12 +95,12 @@ const Home: React.FC = () => {
               <div className="example-block">
                 <h4>Ejemplo 1: Obtener 10 personas con nombre, apellido y DNI</h4>
                 <div className="code-block">
-                  <code>https://mockup-json.vercel.app/api?cantidad=10&fields=nombre,apellido,dni</code>
-                  <button className="copy-btn" onClick={() => navigator.clipboard.writeText('https://mockup-json.vercel.app/api?cantidad=10&fields=nombre,apellido,dni')}>
+                  <code>https://api-argenta.vercel.app/api?cantidad=10&fields=nombre,apellido,dni</code>
+                  <button className="copy-btn" onClick={() => navigator.clipboard.writeText('https://api-argenta.vercel.app/api?cantidad=10&fields=nombre,apellido,dni')}>
                     Copiar
                   </button>
                 </div>
-                <a href="https://mockup-json.vercel.app/api?cantidad=10&fields=nombre,apellido,dni" 
+                <a href="https://api-argenta.vercel.app/api?cantidad=10&fields=nombre,apellido,dni" 
                    target="_blank" 
                    rel="noopener noreferrer" 
                    className="try-link">
@@ -111,12 +111,12 @@ const Home: React.FC = () => {
               <div className="example-block">
                 <h4>Ejemplo 2: Obtener 5 personas con todos los campos disponibles</h4>
                 <div className="code-block">
-                  <code>https://mockup-json.vercel.app/api?cantidad=5&allFields=true</code>
-                  <button className="copy-btn" onClick={() => navigator.clipboard.writeText('https://mockup-json.vercel.app/api?cantidad=5&allFields=true')}>
+                  <code>https://api-argenta.vercel.app/api?cantidad=5&allFields=true</code>
+                  <button className="copy-btn" onClick={() => navigator.clipboard.writeText('https://api-argenta.vercel.app/api?cantidad=5&allFields=true')}>
                     Copiar
                   </button>
                 </div>
-                <a href="https://mockup-json.vercel.app/api?cantidad=5&allFields=true" 
+                <a href="https://api-argenta.vercel.app/api?cantidad=5&allFields=true" 
                    target="_blank" 
                    rel="noopener noreferrer" 
                    className="try-link">
@@ -127,13 +127,13 @@ const Home: React.FC = () => {
               <div className="example-block">
                 <h4>Ejemplo 3: Uso con JavaScript (fetch)</h4>
                 <div className="code-block js-code">
-                  <pre>{`fetch('https://mockup-json.vercel.app/api?cantidad=20&fields=nombre,apellido,edad,domicilio')
+                  <pre>{`fetch('https://api-argenta.vercel.app/api?cantidad=20&fields=nombre,apellido,edad,domicilio')
   .then(response => response.json())
   .then(data => {
     console.log(data);
     // Usar los datos...
   });`}</pre>
-                  <button className="copy-btn" onClick={() => navigator.clipboard.writeText(`fetch('https://mockup-json.vercel.app/api?cantidad=20&fields=nombre,apellido,edad,domicilio')
+                  <button className="copy-btn" onClick={() => navigator.clipboard.writeText(`fetch('https://api-argenta.vercel.app/api?cantidad=20&fields=nombre,apellido,edad,domicilio')
   .then(response => response.json())
   .then(data => {
     console.log(data);
@@ -156,23 +156,23 @@ const Home: React.FC = () => {
             <div className="feature-card">
               <h3>¿Qué ofrece el Generador?</h3>
               <ul className="feature-list">
-                <li>
+                <li key="feature-1">
                   <span className="feature-icon">✓</span>
                   <span>Selección visual de campos específicos a incluir</span>
                 </li>
-                <li>
+                <li key="feature-2">
                   <span className="feature-icon">✓</span>
                   <span>Vista previa instantánea del JSON generado</span>
                 </li>
-                <li>
+                <li key="feature-3">
                   <span className="feature-icon">✓</span>
                   <span>Opción para copiar el JSON al portapapeles</span>
                 </li>
-                <li>
+                <li key="feature-4">
                   <span className="feature-icon">✓</span>
                   <span>Ajuste de cantidad de registros mediante slider</span>
                 </li>
-                <li>
+                <li key="feature-5">
                   <span className="feature-icon">✓</span>
                   <span>URL compartible con la configuración actual</span>
                 </li>
@@ -182,55 +182,55 @@ const Home: React.FC = () => {
             <div className="feature-card">
               <h3>Campos disponibles</h3>
               <div className="fields-grid">
-                <div className="field-item">
+                <div className="field-item" key="field-nombre">
                   <span className="field-name">nombre</span>
                   <span className="field-desc">Nombre de pila argentino</span>
                 </div>
-                <div className="field-item">
+                <div className="field-item" key="field-apellido">
                   <span className="field-name">apellido</span>
                   <span className="field-desc">Apellido argentino</span>
                 </div>
-                <div className="field-item">
+                <div className="field-item" key="field-dni">
                   <span className="field-name">dni</span>
                   <span className="field-desc">DNI argentino con formato</span>
                 </div>
-                <div className="field-item">
+                <div className="field-item" key="field-edad">
                   <span className="field-name">edad</span>
                   <span className="field-desc">Edad (correlacionada con DNI)</span>
                 </div>
-                <div className="field-item">
+                <div className="field-item" key="field-telefono">
                   <span className="field-name">telefono</span>
                   <span className="field-desc">Teléfono fijo con código de área</span>
                 </div>
-                <div className="field-item">
+                <div className="field-item" key="field-celular">
                   <span className="field-name">celular</span>
                   <span className="field-desc">Celular con código de área</span>
                 </div>
-                <div className="field-item">
+                <div className="field-item" key="field-domicilio">
                   <span className="field-name">domicilio</span>
                   <span className="field-desc">Dirección con calle y número</span>
                 </div>
-                <div className="field-item">
+                <div className="field-item" key="field-ciudad">
                   <span className="field-name">ciudad</span>
                   <span className="field-desc">Ciudad argentina</span>
                 </div>
-                <div className="field-item">
+                <div className="field-item" key="field-provincia">
                   <span className="field-name">provincia</span>
                   <span className="field-desc">Provincia argentina</span>
                 </div>
-                <div className="field-item">
+                <div className="field-item" key="field-codigoPostal">
                   <span className="field-name">codigoPostal</span>
                   <span className="field-desc">Código postal argentino</span>
                 </div>
-                <div className="field-item">
+                <div className="field-item" key="field-marcaVehiculo">
                   <span className="field-name">marcaVehiculo</span>
                   <span className="field-desc">Marca de vehículo</span>
                 </div>
-                <div className="field-item">
+                <div className="field-item" key="field-modeloVehiculo">
                   <span className="field-name">modeloVehiculo</span>
                   <span className="field-desc">Modelo de vehículo</span>
                 </div>
-                <div className="field-item">
+                <div className="field-item" key="field-patente">
                   <span className="field-name">patente</span>
                   <span className="field-desc">Patente de vehículo argentina</span>
                 </div>

@@ -32,7 +32,7 @@
 
 ### Opción 1: Usar la versión online
 
-Accede directamente a la versión desplegada en: [https://mockup-json.vercel.app](https://mockup-json.vercel.app)
+Accede directamente a la versión desplegada en: [https://api-argenta.vercel.app](https://api-argenta.vercel.app)
 
 ### Opción 2: Instalar localmente
 
@@ -63,7 +63,7 @@ npm run api
 
 ### Interfaz Gráfica
 
-1. Accede a la aplicación en [http://localhost:3000](http://localhost:3000) o [https://mockup-json.vercel.app](https://mockup-json.vercel.app)
+1. Accede a la aplicación en [http://localhost:3000](http://localhost:3000) o [https://api-argenta.vercel.app](https://api-argenta.vercel.app)
 2. Selecciona los campos que necesitas en el panel izquierdo
 3. Ajusta la cantidad de registros con el control deslizante
 4. El JSON generado aparecerá automáticamente en el panel derecho
@@ -73,13 +73,13 @@ npm run api
 
 ```bash
 # Generar 10 personas con todos los campos
-curl "https://mockup-json.vercel.app/api?cantidad=10&allFields=true"
+curl "https://api-argenta.vercel.app/api?cantidad=10&allFields=true"
 
 # Generar 5 personas con solo nombre, apellido y DNI
-curl "https://mockup-json.vercel.app/api?cantidad=5&fields=nombre,apellido,dni"
+curl "https://api-argenta.vercel.app/api?cantidad=5&fields=nombre,apellido,dni"
 
 # Descargar como archivo JSON
-curl -o "datos.json" "https://mockup-json.vercel.app/api?cantidad=20&fields=nombre,apellido,edad,telefono,celular&download=true"
+curl -o "datos.json" "https://api-argenta.vercel.app/api?cantidad=20&fields=nombre,apellido,edad,telefono,celular&download=true"
 ```
 
 ## 🌐 API REST
@@ -126,7 +126,7 @@ La API está disponible en `/api` y acepta solicitudes GET con diversos parámet
 
 ```javascript
 // Obtener 20 usuarios para un prototipo de red social argentina
-fetch('https://mockup-json.vercel.app/api?cantidad=20&fields=nombre,apellido,edad,ciudad,provincia')
+fetch('https://api-argenta.vercel.app/api?cantidad=20&fields=nombre,apellido,edad,ciudad,provincia')
   .then(response => response.json())
   .then(users => {
     // Poblar tu interfaz con datos creíbles
@@ -138,7 +138,7 @@ fetch('https://mockup-json.vercel.app/api?cantidad=20&fields=nombre,apellido,eda
 
 ```javascript
 // Crear datos de prueba para un sistema de gestión de clientes
-const testData = await fetch('https://mockup-json.vercel.app/api?cantidad=100&fields=nombre,apellido,dni,telefono,celular,domicilio,ciudad,provincia')
+const testData = await fetch('https://api-argenta.vercel.app/api?cantidad=100&fields=nombre,apellido,dni,telefono,celular,domicilio,ciudad,provincia')
   .then(res => res.json());
   
 // Usar los datos para testing de formularios, validaciones, etc.
@@ -149,7 +149,7 @@ runTests(testData);
 
 ```javascript
 // Generar registros iniciales para poblar una base de datos
-const personas = await fetch('https://mockup-json.vercel.app/api?cantidad=500&allFields=true')
+const personas = await fetch('https://api-argenta.vercel.app/api?cantidad=500&allFields=true')
   .then(res => res.json());
 
 // Insertar en tu base de datos SQL
@@ -163,7 +163,7 @@ personas.forEach(persona => {
 
 ```javascript
 // Crear informes financieros con datos ficticios para demostración
-const clientes = await fetch('https://mockup-json.vercel.app/api?cantidad=20&fields=nombre,apellido,dni')
+const clientes = await fetch('https://api-argenta.vercel.app/api?cantidad=20&fields=nombre,apellido,dni')
   .then(res => res.json());
   
 // Generar transacciones ficticias para cada cliente
@@ -176,7 +176,7 @@ const informeCompleto = generarInformeFinanciero(clientes);
 
 ```javascript
 // Los DNIs generados serán coherentes con las edades
-fetch('https://mockup-json.vercel.app/api?fields=nombre,apellido,dni,edad&cantidad=10')
+fetch('https://api-argenta.vercel.app/api?fields=nombre,apellido,dni,edad&cantidad=10')
   .then(res => res.json())
   .then(personas => {
     personas.forEach(p => {
@@ -190,7 +190,7 @@ fetch('https://mockup-json.vercel.app/api?fields=nombre,apellido,dni,edad&cantid
 
 ```javascript
 // Los teléfonos tendrán códigos de área correspondientes a la ciudad/provincia
-fetch('https://mockup-json.vercel.app/api?fields=nombre,ciudad,provincia,telefono,celular&cantidad=5')
+fetch('https://api-argenta.vercel.app/api?fields=nombre,ciudad,provincia,telefono,celular&cantidad=5')
   .then(res => res.json())
   .then(personas => {
     personas.forEach(p => {
@@ -209,7 +209,7 @@ const axios = require('axios');
 
 async function obtenerDatosFicticios() {
   try {
-    const response = await axios.get('https://mockup-json.vercel.app/api', {
+    const response = await axios.get('https://api-argenta.vercel.app/api', {
       params: {
         cantidad: 30,
         fields: 'nombre,apellido,dni,domicilio,ciudad,provincia,codigoPostal,telefono'
@@ -242,7 +242,7 @@ function ClientesDemo() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://mockup-json.vercel.app/api?cantidad=15&fields=nombre,apellido,dni,telefono,celular,ciudad')
+    fetch('https://api-argenta.vercel.app/api?cantidad=15&fields=nombre,apellido,dni,telefono,celular,ciudad')
       .then(res => res.json())
       .then(data => {
         setClientes(data);
@@ -302,6 +302,3 @@ Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo [LICEN
 ---
 
 **Importante**: Los datos generados son completamente ficticios y no corresponden a personas reales. Cualquier coincidencia con datos reales es pura casualidad.
-  },
-})
-```

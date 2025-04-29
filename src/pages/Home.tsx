@@ -44,8 +44,8 @@ function Home() {
             <div className="feature-card">
               <h3>URL Base</h3>
               <div className="code-block">
-                <code>https://mockup-json.vercel.app/api</code>
-                <button className="copy-btn" onClick={() => navigator.clipboard.writeText('https://mockup-json.vercel.app/api')}>
+                <code>https://api-argenta.vercel.app/api</code>
+                <button className="copy-btn" onClick={() => navigator.clipboard.writeText('https://api-argenta.vercel.app/api')}>
                   Copiar
                 </button>
               </div>
@@ -92,12 +92,12 @@ function Home() {
               <div className="example-block">
                 <h4>Ejemplo 1: Obtener 10 personas con nombre, apellido y DNI</h4>
                 <div className="code-block">
-                  <code>https://mockup-json.vercel.app/api?cantidad=10&fields=nombre,apellido,dni</code>
-                  <button className="copy-btn" onClick={() => navigator.clipboard.writeText('https://mockup-json.vercel.app/api?cantidad=10&fields=nombre,apellido,dni')}>
+                  <code>https://api-argenta.vercel.app/api?cantidad=10&fields=nombre,apellido,dni</code>
+                  <button className="copy-btn" onClick={() => navigator.clipboard.writeText('https://api-argenta.vercel.app/api?cantidad=10&fields=nombre,apellido,dni')}>
                     Copiar
                   </button>
                 </div>
-                <a href="https://mockup-json.vercel.app/api?cantidad=10&fields=nombre,apellido,dni" 
+                <a href="https://api-argenta.vercel.app/api?cantidad=10&fields=nombre,apellido,dni" 
                    target="_blank" 
                    rel="noopener noreferrer" 
                    className="try-link">
@@ -108,12 +108,12 @@ function Home() {
               <div className="example-block">
                 <h4>Ejemplo 2: Obtener 5 personas con todos los campos disponibles</h4>
                 <div className="code-block">
-                  <code>https://mockup-json.vercel.app/api?cantidad=5&allFields=true</code>
-                  <button className="copy-btn" onClick={() => navigator.clipboard.writeText('https://mockup-json.vercel.app/api?cantidad=5&allFields=true')}>
+                  <code>https://api-argenta.vercel.app/api?cantidad=5&allFields=true</code>
+                  <button className="copy-btn" onClick={() => navigator.clipboard.writeText('https://api-argenta.vercel.app/api?cantidad=5&allFields=true')}>
                     Copiar
                   </button>
                 </div>
-                <a href="https://mockup-json.vercel.app/api?cantidad=5&allFields=true" 
+                <a href="https://api-argenta.vercel.app/api?cantidad=5&allFields=true" 
                    target="_blank" 
                    rel="noopener noreferrer" 
                    className="try-link">
@@ -124,13 +124,13 @@ function Home() {
               <div className="example-block">
                 <h4>Ejemplo 3: Uso con JavaScript (fetch)</h4>
                 <div className="code-block js-code">
-                  <pre>{`fetch('https://mockup-json.vercel.app/api?cantidad=20&fields=nombre,apellido,edad,domicilio')
+                  <pre>{`fetch('https://api-argenta.vercel.app/api?cantidad=20&fields=nombre,apellido,edad,domicilio')
   .then(response => response.json())
   .then(data => {
     console.log(data);
     // Usar los datos...
   });`}</pre>
-                  <button className="copy-btn" onClick={() => navigator.clipboard.writeText(`fetch('https://mockup-json.vercel.app/api?cantidad=20&fields=nombre,apellido,edad,domicilio')
+                  <button className="copy-btn" onClick={() => navigator.clipboard.writeText(`fetch('https://api-argenta.vercel.app/api?cantidad=20&fields=nombre,apellido,edad,domicilio')
   .then(response => response.json())
   .then(data => {
     console.log(data);
@@ -262,7 +262,7 @@ function Home() {
       </main>
 
       <footer className="home-footer">
-        <p>© 2025 Mockup JSON Argentina | Desarrollado para testing y prototipado</p>
+        <p> 2025 Mockup JSON Argentina | Desarrollado para testing y prototipado</p>
       </footer>
     </div>
   );

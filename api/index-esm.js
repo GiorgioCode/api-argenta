@@ -73,3 +73,8 @@ export default (req, res) => {
     });
   }
 };
+
+const PORT = process.env.PORT || 5174;
+app.listen(PORT, () => {
+  console.log(`API JSON ejecutándose en: https://api-argenta.vercel.app/`);
+});
