@@ -1,7 +1,6 @@
 // api/index.js - Función serverless para Vercel
 
-// Importar la lógica de generación de datos (versión simplificada)
-const {
+import {
   camposDisponibles,
   generarMultiplesPersonas,
   nombres,
@@ -10,10 +9,10 @@ const {
   vehiculos,
   calles,
   dnisGenerados
-} = require('./mockup-generator');
+} from './mockup-generator.js';
 
 // Función principal para la API serverless de Vercel
-module.exports = (req, res) => {
+export default (req, res) => {
   // Configurar CORS
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Origin', '*');
