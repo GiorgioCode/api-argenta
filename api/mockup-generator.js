@@ -271,7 +271,7 @@ const generarMultiplesPersonas = (cantidad, campos) => {
 };
 
 // Exportar todas las funciones y datos
-module.exports = {
+export {
   camposDisponibles,
   generarMultiplesPersonas,
   generarPersona,
